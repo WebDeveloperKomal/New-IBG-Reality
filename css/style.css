@@ -2551,3 +2551,24 @@ label {
 	  opacity: 0;
 	}
   }
+
+  
+
+
+
+
+
+  /* Slider */
+  
+  .slick-slide {
+	  margin: 0px 20px;
+  }
+  
+  .slick-slide img {
+	  width: 65%;
+  }
+  
+
+
+
+  
