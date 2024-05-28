@@ -144,6 +144,7 @@
 	content: "\e627";
 }
 .ti-arrow-right:before {
+	
 	content: ">>";
 }
 .ti-arrow-left:before {
