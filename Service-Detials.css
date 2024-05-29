@@ -70913,3 +70913,20 @@ rs-loader.spinner15 .rs-spinner-inner:last-child {
 	border: solid 5px red;
 } */
 
+.scroll-top {
+    position: fixed;
+    z-index: 99;
+    bottom: 24px;
+    right: 30px;
+    height: 47px;
+    width: 47px;
+    display: none; /* Initially hidden */
+	background-color: #ff5e15; /* Change as needed */
+    color: #fff; /* Change as needed */
+    padding: 3px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+	font-size: 22px;
+    z-index: 1000; /* Ensure it is on top of other elements */
+}

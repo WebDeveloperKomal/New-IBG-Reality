@@ -35,7 +35,8 @@ $(document).ready(function () {
         margin: 10,
         nav: true,
         autoplay: true,
-        autoplayTimeout: 2000,
+        autoplayTimeout: 2000, // Interval between each autoplay step
+        autoplaySpeed: 1000, // Speed of the transition
         autoplayHoverPause: true,
         responsive: {
             0: {
@@ -50,6 +51,7 @@ $(document).ready(function () {
         }
     });
 
+    
     $(document).ready(function() {
         // Show or hide the scroll-to-top button
         $(window).scroll(function() {
