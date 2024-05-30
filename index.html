@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Home - IBG Reality</title>
+
+    <!-- <base href="/IBGReality/">
+    <base href="/"> -->
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,6 +47,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -69,8 +74,7 @@
                             <li><span><i class="fas fa-map-marker-alt"></i></span> Hadapsar, Pune, MAH, IN-411028</li>
                         </ul>
                         <ul class="right">
-                            <li><a href="https://www.facebook.com/ibgreality/"><i
-                                        class="fab fa-facebook"></i></a></li>
+                            <li><a href="https://www.facebook.com/ibgreality/"><i class="fab fa-facebook"></i></a></li>
                             <li><a href="https://www.instagram.com/ibgreality/?next=%2F"><i
                                         class="fab fa-instagram"></i></a></li>
                             <li><a href="https://www.youtube.com/@IBGReality"><i class="fab fa-youtube"></i></a></li>
@@ -1256,7 +1260,7 @@
                                 </div> -->
                             </div>
                             <div class="team-content text-center">
-                                <h3>Dileep Varma</h3>
+                                <h3>Omkar Kasar</h3>
                                 <h5>Architect Designer</h5>
                             </div>
                         </div>
@@ -1307,35 +1311,31 @@
                                 <h5>Free Quote</h5>
                                 <h2>Get A Free consultation<span>.</span></h2>
                             </div>
-                            <form action="#">
+                            <form method="POST" onsubmit="saveForm(event)">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-12">
                                         <div class="text-box">
                                             <span><i class="far fa-user"></i></span>
-                                            <input type="text" placeholder="Enter full name">
+                                            <input type="text" id="name" placeholder="Enter full name" required>
                                         </div>
-
                                     </div>
                                     <div class="col-xl-6 col-lg-12">
                                         <div class="text-box">
                                             <span><i class="far fa-envelope"></i></span>
-                                            <input type="email" placeholder="Your email">
+                                            <input type="email" id="email" placeholder="Your email" required>
                                         </div>
                                     </div>
                                     <div class="col-xl-12 col-lg-12">
                                         <div class="text-box">
                                             <span><i class="fas fa-arrow-right"></i></span>
-                                            <input type="text" placeholder="Your Subject">
+                                            <input type="text" id="subject" placeholder="Your Subject" required>
                                         </div>
                                     </div>
                                     <div class="col-xl-12 col-lg-12">
                                         <div class="message-box">
                                             <span><i class="far fa-edit"></i></span>
-                                            <textarea name="message" cols="30" rows="10"
-                                                placeholder="Your Massage"></textarea>
-                                            <button class="thm-btn" type="submit"><i class="far fa-paper-plane"
-                                                    onclick="saveForm()"></i>
-                                                Send massage</button>
+                                            <textarea name="message" cols="30" rows="10" placeholder="Your Message" id="message" required></textarea>
+                                            <button class="thm-btn" type="submit"><i class="far fa-paper-plane"></i> Send message</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1646,7 +1646,7 @@
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"></script>
 
-
+    <script src="index.js"></script>
     <script src="js/carousel.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
