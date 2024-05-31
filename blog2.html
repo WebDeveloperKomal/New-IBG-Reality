@@ -43,6 +43,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+
 </head>
 
 <body>
@@ -91,8 +94,8 @@
                         </div>
                     </div>
                     <div class="col-xl-10 col-lg-10">
-                        <div class="header-button d-none d-lg-block f-right">
-                            <a class="thm-btn" href="#">Get a quote</a>
+                      <div class="header-button d-none d-lg-block f-right">
+                            <a class="thm-btn" href="request-quote.html">Get a quote</a>
                         </div>
                         <div class="main-menu f-right">
                             <nav id="mobile-menu">
@@ -610,33 +613,36 @@
                                                 rel="nofollow" id="cancel-comment-reply-link"
                                                 href=""
                                                 style="display:none;">Cancel Comment</a></small></h3>
-                                    <form
-                                        action=""
-                                        method="post" id="commentform" class="comment-form" novalidate>
-                                        <div class="comment-form-comment"><textarea id="comment" name="comment"
-                                                cols="45" rows="8" placeholder="Comment *"
-                                                aria-required="true"></textarea></div>
-                                        <div class="row">
-                                            <div class="comment-form-author col-lg-4 col-md-4 col-sm-12"><input
-                                                    id="author" name="author" type="text" value="" size="30"
-                                                    placeholder="Name" /></div>
-                                            <div class="comment-form-email col-lg-4 col-md-4 col-sm-12"><input
-                                                    id="email" name="email" type="text" value="" size="30"
-                                                    placeholder="Email" /></div>
-                                            <div class="comment-form-website col-lg-4 col-md-4 col-sm-12"><input
-                                                    id="website" name="website" type="text" value="" size="30"
-                                                    placeholder="Website" /></div>
-                                        </div>
-                                        <p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent"
-                                                name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label
-                                                for="wp-comment-cookies-consent">Save my name, email, and website in
-                                                this browser for the next time I comment.</label></p>
-                                        <p class="form-submit"><input name="submit" type="submit" id="submit"
-                                                class="submit" value="Post Comment" /> <input type='hidden'
-                                                name='comment_post_ID' value='312' id='comment_post_ID' /> <input
-                                                type='hidden' name='comment_parent' id='comment_parent' value='0' />
-                                        </p>
-                                    </form>
+                                                <form method="POST" onsubmit="saveComment(event)" id="commentform"
+                                                class="comment-form" novalidate>
+                                                <div class="comment-form-comment">
+                                                    <textarea id="comment" name="comment" cols="45" rows="8"
+                                                        placeholder="Comment *" aria-required="true"></textarea>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="comment-form-author col-lg-4 col-md-4 col-sm-12">
+                                                        <input id="name" name="author" type="text" value="" size="30"
+                                                            placeholder="Name" />
+                                                    </div>
+                                                    <div class="comment-form-email col-lg-4 col-md-4 col-sm-12">
+                                                        <input id="email" name="email" type="text" value="" size="30"
+                                                            placeholder="Email" />
+                                                    </div>
+        
+                                                    <div class="comment-form-website col-lg-4 col-md-4 col-sm-12">
+                                                        <input id="website" name="website" type="text" value="" size="30"
+                                                            placeholder="Website" />
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" id="blogId" name="blogId" value="Blog2" />
+                                                <p class="form-submit">
+                                                    <input name="submit" type="submit" id="submit" class="submit"
+                                                        value="Post Comment" />
+                                                    <input type='hidden' name='comment_post_ID' value='312'
+                                                        id='comment_post_ID' />
+                                                    <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                                                </p>
+                                            </form>
                                 </div><!-- #respond -->
                             </div><!-- #comments -->
                         </main><!-- #main -->

@@ -202,6 +202,7 @@ label {
 	text-transform: uppercase;
 	background-color: #ff5e15;
 	font-weight: 700;
+	border-radius: 50px;
 	display: inline-block;
 }
 .thm-btn:hover {
@@ -215,6 +216,7 @@ label {
 	z-index: -1;
 	bottom: 0px;
 	content: "";
+	border-radius: 50px;
 	position: absolute;
 	background-color: #002052;
 	transition: all 0.3s ease-in-out;

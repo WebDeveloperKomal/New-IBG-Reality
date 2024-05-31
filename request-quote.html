@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Contact - IBG Reality</title>
+    <title>Request Quote - IBG Reality</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -37,10 +37,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+
 </head>
 
 <body>
@@ -88,9 +90,9 @@
                         </div>
                     </div>
                     <div class="col-xl-10 col-lg-10">
-                      <div class="header-button d-none d-lg-block f-right">
-                            <a class="thm-btn" href="request-quote.html">Get a quote</a>
-                        </div>
+                        <!-- <div class="header-button d-none d-lg-block f-right" >
+                            <a class="thm-btn" href="Admin-Login.html">Admin Login</a>
+                        </div> -->
                         <div class="main-menu f-right">
                             <nav id="mobile-menu">
                                 <ul>
@@ -175,15 +177,15 @@
                     <div class="col-xl-12">
                         <div class="page-title text-center">
                             <div class="border-title">
-                                <h1>Contact</h1>
+                                <h1>Request Quote</h1>
                             </div>
-                            <h1>Contact us</h1>
+                            <h1>Request Quote</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center">
                                     <li class="breadcrumb-item">
                                         <a href="index.html">Home</a>
                                     </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Request Quote</li>
                                 </ol>
                             </nav>
                         </div>
@@ -194,166 +196,105 @@
         <!-- page title area end -->
 
         <!-- contact start -->
-        <section class="contact-area gray-bg pt-120 pb-80">
+        <section class="contact-area pt-120 pb-120">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-9 col-lg-9 col-md-8">
-                        <div class="contact-form mb-40">
-                            <h3>Contact form</h3>
-                            <form method="POST" onsubmit="saveForm(event)">
+                    <div class="col-xl-5 col-lg-5 col-md-12">
+                        <div class="contact-left">
+                            <div class="contact-thumb-left">
+                                <img src="img/bg/contact-bg.png" alt="image_not_found">
+                                <div class="contact-shape"></div>
+                            </div>
+                            <div class="contact-thumb-right">
+                                <img src="img/bg/contact-bg-02.jpg" alt="image_not_found">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-12">
+                        <div class="contact-right">
+                            <div class="border-title-2">
+                                <h1>Quote</h1>
+                            </div>
+                            <div class="about-title mb-20">
+                                <!-- <h5>Request Quote</h5> -->
+                                <h2>Request A Quote<span>.</span></h2>
+                            </div>
+
+                            <form method="POST" onsubmit="saveContractForm(event)">
                                 <div class="row">
-                                    <div class="col-xl-6">
-                                        <input type="text" id="name" placeholder="Your Name" required>
+                                    <div class="col-xl-12 col-lg-12">
+                                        <div class="text-box">
+                                            <span><i class="fa-solid fa-briefcase"></i></span>
+                                            <input type="text" id="companyName" placeholder="E.g. IBG Reality" required>
+                                        </div>
                                     </div>
-                                    <div class="col-xl-6">
-                                        <input type="email" id="email" placeholder="Your Mail" required>
+                                    <div class="col-xl-12 col-lg-12">
+                                        <div class="text-box">
+                                            <span><i class="fa-solid fa-globe"></i></span>
+                                            <input type="text" id="website" placeholder="E.g. www.ibgreality.com"
+                                                required>
+                                        </div>
                                     </div>
-                                    <div class="col-xl-12">
-                                        <input type="text" id="subject" placeholder="Subject" required>
+                                    <div class="col-xl-12 col-lg-12">
+                                        <div class="text-box">
+                                            <span><i class="fa-solid fa-phone-flip"></i></span>
+                                            <input type="tel" id="phoneNumber" placeholder="Phone Number" required
+                                                pattern="[0-9]+">
+                                        </div>
                                     </div>
-                                    <div class="col-xl-12">
-                                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                                        <button class="thm-btn" type="submit">Send Message</button>
+                                    <div class="col-xl-12 col-lg-12">
+                                        <div class="text-box">
+                                            <span><i class="fas fa-location"></i></span>
+                                            <input type="text" id="location" placeholder="location" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-12">
+                                        <select id="purpose"
+                                            style=" width: 18.30rem; background-color: #f6f6f6; height: 61px; border: #f6f6f6 2px solid;  padding: 10px 30px; padding-left: 24px;"
+                                            required>
+                                            <option value="">Select Purpose</option>
+                                            <option value="Regular Business Office">Regular Business Office</option>
+                                            <option value="Executive Leadership Spaces">Executive Leadership Spaces
+                                            </option>
+                                            <option value="Sales and Front-end Office">Sales and Front-end Office
+                                            </option>
+                                            <option value="Bank Office /Call Centre /Data Centre">Bank Office/Call
+                                                Centre /Data Centre </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-12">
+                                        <select id="contract"
+                                            style=" width: 18.30rem; background-color: #f6f6f6; height: 61px; border: #f6f6f6 2px solid;  padding: 10px 30px; padding-left: 24px;"
+                                            required>
+                                            <option value="">Select Contract</option>
+                                            <option value="New Building">New Building</option>
+                                            <option value="Building Renovation">Building Renovation</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-12">
+                                        <div class="slider" style="margin-top: 25px; margin-left: 30px;">Office Area
+                                            <span style="margin-left: 20px; font-style: italic; color:#8a8f96;">Carpet
+                                                (Sq.Ft)</span>
+                                            <input id="areaSqft" class="form-input" type="range" min="500" max="50000"
+                                                value="3000" oninput="rangeValue.innerText = this.value" required>
+                                            <p id="rangeValue">3000</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 offset-xl-4 col-lg-12">
+                                        <div class="message-box">
+                                            <button class="thm-btn" type="submit"><i class="far fa-paper-plane"></i>
+                                                Send message</button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
-                            <!-- <form method="POST" class="wpcf7-form init" aria-label="Contact form"
-                                novalidate="novalidate" data-status="init">
-                                <div style="display: none;">
-                                    <input type="hidden" name="_wpcf7" value="6"></input>
 
-                                    <input type="hidden" name="_wpcf7_version" value="5.7.6"></input>
-
-                                    <input type="hidden" name="_wpcf7_locale" value="en_US"></input>
-
-                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f6-p29-o1"></input>
-
-                                    <input type="hidden" name="_wpcf7_container_post" value="29"></input>
-
-                                    <input type="hidden" name="_wpcf7_posted_data_hash" value=""></input>
-                                </div>
-
-                                <div class="wp-row-ctf7 contact-form-2">
-                                    <div class="row input-contact">
-                                        <div class="col-lg-6">
-                                            <div class="input-filled">
-                                                <p>
-                                                    <span class="wpcf7-form-control-wrap" data-name="your-name">
-                                                        <input size="40" class="wpcf7-form-control wpcf7-text"
-                                                            aria-invalid="false" placeholder="Your Name" value=""
-                                                            type="text" name="your-name" id="name"></input>
-                                                    </span>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6">
-                                            <div class="input-filled">
-                                                <p>
-                                                    <span class="wpcf7-form-control-wrap" data-name="your-email">
-                                                        <input size="40"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Your Mail" value="" type="text"
-                                                            name="your-email" id="email"></input>
-                                                    </span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row input-contact">
-                                        <div class="col-12">
-                                            <div class="input-filled">
-                                                <p>
-                                                    <span class="wpcf7-form-control-wrap" data-name="your-subject">
-                                                        <input size="40" class="wpcf7-form-control wpcf7-text"
-                                                            aria-invalid="false" placeholder="Enter Subject" value=""
-                                                            type="text" name="your-subject" id="subject"></input>
-                                                    </span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="input-filled">
-                                                <p>
-                                                    <span class="wpcf7-form-control-wrap" data-name="your-message">
-                                                        <textarea cols="40" rows="10"
-                                                            class="wpcf7-form-control wpcf7-textarea"
-                                                            aria-invalid="false" placeholder="Your Message"
-                                                            name="your-message" id="message"></textarea>
-                                                    </span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row buttom-contact">
-                                        <div class="col-12">
-                                            <div class="input-filled input-filled-btn">
-                                                <p>
-                                                    <button id="submit" type="submit" class="wpcf7-submit thm-btn"
-                                                        onclick="saveForm()">
-                                                        <span>Send
-                                                            Message</span>
-                                                    </button>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="wpcf7-response-output" aria-hidden="true"></div>
-                            </form> -->
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4">
-                        <div class="contact-info mb-40">
-                            <h3>Contact Details</h3>
-                            <ul>
-                                <li>
-                                    <div class="contact right-info">
-                                        <div class="c-right-icon">
-                                            <span><i class="fas fa-map-marker-alt"></i></span>
-                                        </div>
-                                        <div class="c-right-text">
-                                            <p>Hadapsar, Pune,</p>
-                                            <p> MAH, IN-411028</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="contact right-info">
-                                        <div class="c-right-icon">
-                                            <span><i class="fas fa-phone-alt"></i></span>
-                                        </div>
-                                        <div class="c-right-text">
-                                            <p>+91 7391012316</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="contact right-info">
-                                        <div class="c-right-icon">
-                                            <span><i class="far fa-envelope"></i></span>
-                                        </div>
-                                        <div class="c-right-text">
-                                            <p>contact@ibgreality.com</p>
-                                            <!-- <p>Fonsingo@mail.com</p> -->
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- contact end -->
-
         <!-- map start -->
         <section class="gmaps-area">
             <div class="contact-map">
@@ -365,9 +306,9 @@
             </div>
         </section>
         <!-- map end -->
+
     </main>
 
-    <!-- footer start -->
     <!-- footer start -->
     <footer>
         <div class="footer-area footer-2 footer-height pt-100 pb-40">
@@ -568,8 +509,6 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
-    <script src="index.js"></script>
 
     <script src="js/carousel.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
